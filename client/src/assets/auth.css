@@ -1,0 +1,9 @@
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+}
