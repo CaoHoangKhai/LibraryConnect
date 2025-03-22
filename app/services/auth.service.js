@@ -4,8 +4,6 @@ class AuthService {
     constructor(client) {
         this.Auth = client.db().collection("DOCGIA");
     }
-
-    // Hàm trích xuất dữ liệu cần thiết từ payload
     extractAuthData(payload) {
         return {
             madocgia: payload.madocgia,
@@ -46,31 +44,28 @@ class AuthService {
         if (!dienthoai) {
             throw new Error("Vui lòng nhập số điện thoại.");
         }
-    
+
         const emailExists = await this.checkEmail(email);
         const phoneExists = await this.checkPhone(dienthoai);
-    
+
         if (!emailExists) {
             throw new Error("Email không tồn tại.");
         }
         if (!phoneExists) {
             throw new Error("Số điện thoại không tồn tại.");
         }
-        
+
         // Kiểm tra nếu email và số điện thoại không thuộc cùng một người dùng
         if (emailExists.dienthoai !== dienthoai) {
             throw new Error("Email hoặc số điện thoại không chính xác.");
         }
-    
+
         return emailExists; // Trả về thông tin người dùng nếu đúng
     }
-    
-
     // Tìm độc giả theo mã độc giả
     async findById(id) {
         return await this.Auth.findOne({ madocgia: id });  // Không cần ObjectId
     }
-
 
     // Tìm tất cả độc giả
     async findAll() {

@@ -11,7 +11,7 @@ router.get("/register", (req, res) => {
 
 // Đăng nhập (POST)
 router.post("/login", authController.login);
-router.get("/register", (req, res) => {
+router.get("/login", (req, res) => {
     res.json({ message: "Trang Đăng Nhập" });
 });
 

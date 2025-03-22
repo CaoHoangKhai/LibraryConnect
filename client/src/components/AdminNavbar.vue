@@ -6,23 +6,30 @@
 
         <ul class="nav flex-column">
             <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'user.books' }">📚 Sách</router-link>
+                <router-link class="nav-link" :to="{ name: 'admin.dashboard' }">Trang Tổng Quan</router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'user.favorite' }">❤️ Sách Yêu Thích</router-link>
+                <router-link class="nav-link" :to="{ name: 'admin.users' }">👥Dánh Sách Khách Hàng</router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'user.borrowing' }">⏳ Sách Đang Mượn</router-link>
+                <router-link class="nav-link" :to="{ name: 'admin.books' }">📚 Sách</router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'user.borrowed' }">📚 Sách Đã Mượn</router-link>
+                <router-link class="nav-link" :to="{ name: 'admin.addbook' }">📚 Thêm Sách</router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'user.profile' }">📖 Hồ Sơ Cá Nhân</router-link>
+                <router-link class="nav-link" :to="{ name: 'admin.borrowed' }">📖 Sách Cho Mượn</router-link>
+            </li>
+            <li class="nav-item">
+                <router-link class="nav-link" :to="{ name: 'admin.publisher' }">Nhà Xuất Bản</router-link>
+            </li>
+            <li class="nav-item">
+                <router-link class="nav-link" :to="{ name: 'admin.profile' }">📖 Hồ Sơ Cá Nhân</router-link>
             </li>
             <li class="nav-item">
                 <button class="btn btn-danger w-100 mt-3" @click="logout">🚪 Đăng Xuất</button>
             </li>
+
         </ul>
     </nav>
 </template>
