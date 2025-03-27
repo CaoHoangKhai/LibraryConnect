@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const authRouter = require("./app/routes/auth.route");
 const adminRouter = require("./app/routes/admin.route");
+const userRouter = require("./app/routes/user.route");
 const ApiError = require("./app/api-error");
 
 const app = express();
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/admin", adminRouter);
+app.use("/user",userRouter)
 app.get("/", (req, res) => {
     res.send({ message: "Welcome to Library book application." });
 });

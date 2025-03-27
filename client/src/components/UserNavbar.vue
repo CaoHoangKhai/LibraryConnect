@@ -9,9 +9,6 @@
                 <router-link class="nav-link" :to="{ name: 'user.books' }">📚 Sách</router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'user.favorite' }">❤️ Sách Yêu Thích</router-link>
-            </li>
-            <li class="nav-item">
                 <router-link class="nav-link" :to="{ name: 'user.borrowing' }">⏳ Sách Đang Mượn</router-link>
             </li>
             <li class="nav-item">

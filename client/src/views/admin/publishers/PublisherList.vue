@@ -6,7 +6,7 @@
             </aside>
             <main class="col-md-9 col-lg-10 px-md-4">
                 <div class="mt-3">
-                    <h2 class="mb-4 text-primary">📚 Danh Sách Nhà Xuất Bản</h2>
+                    <h2 class="mb-4 text-primary">🏢 Danh Sách Nhà Xuất Bản</h2>
 
                     <!-- Kiểm tra nếu có dữ liệu -->
                     <div v-if="publishers.length > 0">

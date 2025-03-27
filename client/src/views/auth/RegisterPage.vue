@@ -146,17 +146,21 @@ export default {
         generateMadocgia() {
             if (this.registerData.ten && this.registerData.ngaysinh) {
                 const date = new Date(this.registerData.ngaysinh);
-                const month = String(date.getMonth() + 1).padStart(2, "0"); // 2 chữ số
-                const day = String(date.getDate()).padStart(2, "0"); // 2 chữ số
+                const month = String(date.getMonth() + 1).padStart(2, "0"); // Tháng (2 chữ số)
+                const day = String(date.getDate()).padStart(2, "0"); // Ngày (2 chữ số)
 
-                // Xử lý tên thành không dấu, chữ thường
-                const tenKhongDau = this.removeVietnameseTones(this.registerData.ten);
+                // Lấy thời gian hiện tại
+                const now = new Date();
+                const minutes = String(now.getMinutes()).padStart(2, "0"); // Phút (2 chữ số)
+                const seconds = String(now.getSeconds()).padStart(2, "0"); // Giây (2 chữ số)
+
+                // Xử lý tên thành không dấu, chữ thường và loại bỏ khoảng trắng
+                const tenKhongDau = this.removeVietnameseTones(this.registerData.ten).replace(/\s+/g, "");
 
                 // Tạo mã độc giả
-                this.registerData.madocgia = `${tenKhongDau}${day}${month}`;
+                this.registerData.madocgia = `${tenKhongDau}${month}${day}${minutes}${seconds}`;
             }
         },
-
         async register(values, { setErrors }) {
             this.isLoading = true;
             this.errorMessage = "";

@@ -83,6 +83,10 @@ class AuthService {
     async checkPhone(dienthoai) {
         return await this.Auth.findOne({ dienthoai });
     }
+    async countUsers() {
+        return await this.Auth.countDocuments();
+    }
+    
 
 }
 

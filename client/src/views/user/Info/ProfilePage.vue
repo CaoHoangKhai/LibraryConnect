@@ -10,11 +10,31 @@
                 </div>
                 <div class="card-body">
                     <form>
-                        <!-- Họ và Tên + Số Điện Thoại -->
+
+                        <!-- Mã Độc Giả -->
+                        <div class="mb-4">
+                            <label class="form-label"><i class="bi bi-person-fill"></i> Mã Độc Giả</label>
+                            <input v-model="user.madocgia" type="text" class="form-control form-control-lg" readonly />
+                        </div>
+
+                        <!-- Họ và Tên + Ngày Sinh -->
                         <div class="mb-4 row">
                             <div class="col-md-6">
                                 <label class="form-label"><i class="bi bi-person-fill"></i> Họ và Tên</label>
                                 <input v-model="fullName" type="text" class="form-control form-control-lg" readonly />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><i class="bi bi-calendar"></i> Ngày Sinh</label>
+                                <input v-model="formattedDate" type="text" class="form-control form-control-lg"
+                                    readonly />
+                            </div>
+                        </div>
+
+                        <!-- Giới Tính + Số Điện Thoại -->
+                        <div class="mb-4 row">
+                            <div class="col-md-6">
+                                <label class="form-label"><i class="bi bi-gender-ambiguous"></i> Giới Tính</label>
+                                <input v-model="user.phai" type="text" class="form-control form-control-lg" readonly />
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label"><i class="bi bi-telephone-fill"></i> Số Điện Thoại</label>
@@ -23,37 +43,25 @@
                             </div>
                         </div>
 
-                        <!-- Ngày Sinh + Giới Tính -->
+                        <!-- Email + Địa Chỉ -->
                         <div class="mb-4 row">
-                            <div class="col-md-6">
-                                <label class="form-label"><i class="bi bi-calendar"></i> Ngày Sinh</label>
-                                <input v-model="formattedDate" type="text" class="form-control form-control-lg"
-                                    readonly />
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"><i class="bi bi-gender-ambiguous"></i> Giới Tính</label>
-                                <input v-model="user.phai" type="text" class="form-control form-control-lg" readonly />
-                            </div>
-                        </div>
-
-                        <!-- Địa Chỉ + Email -->
-                        <div class="mb-4 row">
-                            <div class="col-md-6">
-                                <label class="form-label"><i class="bi bi-geo-alt-fill"></i> Địa Chỉ</label>
-                                <input v-model="user.diachi" type="text" class="form-control form-control-lg"
-                                    readonly />
-                            </div>
                             <div class="col-md-6">
                                 <label class="form-label"><i class="bi bi-envelope-fill"></i> Email</label>
                                 <input v-model="user.email" type="email" class="form-control form-control-lg"
+                                    readonly />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><i class="bi bi-geo-alt-fill"></i> Địa Chỉ</label>
+                                <input v-model="user.diachi" type="text" class="form-control form-control-lg"
                                     readonly />
                             </div>
                         </div>
 
                         <!-- Nút đăng xuất -->
                         <!-- <button class="btn btn-danger w-100 mt-4 py-2" @click="logout">
-                        <i class="bi bi-box-arrow-right"></i> Đăng xuất
-                    </button> -->
+                            <i class="bi bi-box-arrow-right"></i> Đăng xuất
+                        </button> -->
+
                     </form>
                 </div>
             </main>

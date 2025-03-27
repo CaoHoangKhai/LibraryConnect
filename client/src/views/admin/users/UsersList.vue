@@ -6,7 +6,7 @@
             </aside>
             <main class="col-md-9 col-lg-10 px-md-4">
                 <div class="mt-3">
-                    <h2 class="mb-4 text-primary">📚 Danh Sách Độc Giả</h2>
+                    <h2 class="mb-4 text-primary">👥 Danh Sách Độc Giả</h2>
 
                     <!-- Bảng danh sách độc giả -->
                     <div v-if="users.length > 0">
@@ -25,7 +25,11 @@
                             </thead>
                             <tbody>
                                 <tr v-for="user in users" :key="user._id">
-                                    <td>{{ user.madocgia }}</td>
+                                    <td>
+                                        <span class="clickable" @click="goToUserDetail(user.madocgia)">
+                                            {{ user.madocgia }}
+                                        </span>
+                                    </td>
                                     <td>{{ user.holot }}</td>
                                     <td>{{ user.ten }}</td>
                                     <td>{{ formatDate(user.ngaysinh) }}</td>
@@ -75,6 +79,11 @@ export default {
             const date = new Date(dateStr);
             return date.toLocaleDateString("vi-VN");
         },
+
+        goToUserDetail(madocgia) {
+            this.$router.push(`/admin/user/${madocgia}`);
+        },
+
     },
 };
 </script>
@@ -84,7 +93,8 @@ export default {
     font-size: 16px;
 }
 
-.table th, .table td {
+.table th,
+.table td {
     text-align: center;
     vertical-align: middle;
 }
