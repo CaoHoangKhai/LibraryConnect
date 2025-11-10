@@ -115,20 +115,38 @@ npm run dev
 
 ---
 
-## 📸 Giao diện minh họa
+## ⚙️ Quyền hạn theo nhóm người dùng
 
 ### 👨‍💼 Quản trị viên
-- Trang đăng nhập  
-- Trang quản lý sách  
-- Trang quản lý độc giả  
-- Trang thống kê mượn – trả  
+- **Đăng nhập** vào hệ thống.
+- **Thống kê**:
+  - Tổng số người dùng
+  - Tổng số sách
+  - Số sách đang được mượn
+  - Số sách trả muộn
+- **Quản lý tài khoản người dùng**:
+  - Thêm tài khoản mới
+  - Cập nhật thông tin tài khoản
+- **Quản lý sách**:
+  - Thêm sách mới
+  - Cập nhật thông tin sách (tên, tác giả, ...)
+  - Cập nhật số lượng sách hiện có
+  - Xem danh sách sách đang mượn
+  - Xem danh sách sách đã cho mượn
+- **Quản lý nhà xuất bản**:
+  - Thêm nhà xuất bản mới
+  - Cập nhật thông tin nhà xuất bản
 
 ### 👤 Người dùng
-- Trang đăng nhập / đăng ký  
-- Hồ sơ cá nhân  
-- Danh sách sách  
-- Trang mượn sách  
-- Trang lịch sử mượn  
+- **Đăng nhập / Đăng ký** tài khoản
+- **Quản lý sách**:
+  - Xem danh sách sách đã mượn
+  - Xem danh sách sách đang mượn
+  - Xem danh sách sách hiện có trong thư viện
+- **Quản lý tài khoản cá nhân**:
+  - Chỉnh sửa thông tin cá nhân
+
+
 
 ---
 
