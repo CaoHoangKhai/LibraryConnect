@@ -16,14 +16,14 @@ Dự án được phát triển bằng **Node.js**, **Vue.js**, **MongoDB** và 
 
 ## ⚙️ Công nghệ sử dụng
 
-| Công nghệ | Vai trò | Phiên bản khuyến nghị |
-|------------|----------|------------------------|
-| **Node.js** | Backend, xử lý API | v18+ |
-| **Express.js** | Framework web cho Node | Latest |
-| **MongoDB** | Cơ sở dữ liệu NoSQL | 6.x |
-| **Vue.js** | Frontend, giao diện người dùng | v3.x |
-| **Bootstrap** | Giao diện, responsive layout | 5.x |
-| **Visual Studio Code** | IDE phát triển | Latest |
+| Công nghệ | Vai trò |
+|------------|----------|
+| **Node.js** | Backend, xử lý API |
+| **Express.js** | Framework web cho Node |
+| **MongoDB** | Cơ sở dữ liệu NoSQL |
+| **Vue.js** | Frontend, giao diện người dùng 
+| **Bootstrap** | Giao diện, responsive layout |
+| **Visual Studio Code** | IDE phát triển |
 
 ---
 
@@ -32,22 +32,25 @@ Dự án được phát triển bằng **Node.js**, **Vue.js**, **MongoDB** và 
 ```
 LibraryConnect/
 │
-├── backend/                # Source code Node.js (API & server)
-│   ├── src/
-│   │   ├── controllers/    # Bộ điều khiển xử lý logic
-│   │   ├── models/         # Định nghĩa các collection MongoDB
-│   │   ├── routes/         # Các endpoint API
-│   │   └── app.js          # Điểm khởi chạy backend
-│   ├── package.json
+├── app/ # Backend - API & Server (Node.js)
+│ ├── config/ # Cấu hình hệ thống (CSDL, môi trường, biến ENV)
+│ ├── controller/ # Bộ điều khiển xử lý logic cho các API
+│ ├── routes/ # Định tuyến API (Express Router)
+│ ├── services/ # Xử lý nghiệp vụ, giao tiếp giữa controller và model
+│ ├── utils/ # Các hàm tiện ích dùng chung (format dữ liệu, xác thực,...)
+│ ├── package.json # Thông tin và thư viện backend
 │
-├── frontend/               # Source code Vue.js
-│   ├── src/
-│   │   ├── components/     # Các component giao diện
-│   │   ├── views/          # Trang giao diện chính (Admin/User)
-│   │   └── router/         # Điều hướng Vue Router
-│   ├── package.json
+├── client/ # Frontend - Giao diện người dùng (Vue.js)
+│ ├── public/ # Chứa các tệp tĩnh (favicon, index.html,...)
+│ ├── src/
+│ │ ├── assets/ # Hình ảnh, biểu tượng, CSS, font,...
+│ │ ├── components/ # Các component Vue tái sử dụng (nút, header, form,...)
+│ │ ├── router/ # Cấu hình định tuyến (Vue Router)
+│ │ ├── services/ # Các hàm gọi API (axios)
+│ │ └── views/ # Các trang giao diện chính (Admin/User)
+│ ├── package.json # Thông tin và thư viện frontend
 │
-└── README.md
+└── README.md # Tài liệu mô tả dự án
 ```
 
 ---
@@ -89,27 +92,26 @@ Các collection chính trong MongoDB:
 
 ### 1️⃣ Clone repository
 ```bash
-git clone https://github.com/<your-username>/LibraryConnect.git
+git clone https://github.com/CaoHoangKhai/LibraryConnect.git
 cd LibraryConnect
 ```
 
 ### 2️⃣ Cài đặt Backend
 ```bash
-cd backend
 npm install
-npm run dev
+npm start
 ```
 
 > Mặc định server chạy ở: **http://localhost:5000**
 
 ### 3️⃣ Cài đặt Frontend
 ```bash
-cd ../frontend
+cd client
 npm install
-npm run serve
+npm run dev
 ```
 
-> Mặc định frontend chạy ở: **http://localhost:8080**
+> Mặc định frontend chạy ở: **http://localhost:3001**
 
 ---
 
@@ -141,7 +143,7 @@ npm run serve
 - Chưa tích hợp chức năng gửi thông báo (email, SMS).  
 - Chưa có hệ thống phân quyền nâng cao.  
 - Chưa hỗ trợ upload hình ảnh bìa sách.  
-
+  
 ---
 
 ## 🚀 Hướng phát triển
@@ -161,9 +163,6 @@ npm run serve
 
 ---
 
-## 🙏 Lời cảm ơn
-Xin gửi lời cảm ơn chân thành đến **giảng viên hướng dẫn** và **các bạn trong nhóm** đã hỗ trợ trong quá trình thực hiện đồ án.  
-Dự án này là bước khởi đầu quý báu trong việc ứng dụng kiến thức lập trình web thực tế.  
 
 ---
 
