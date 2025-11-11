@@ -160,7 +160,7 @@ npm run dev
 ## ⚠️ Hạn chế
 - Chưa tích hợp chức năng gửi thông báo (email, SMS).  
 - Chưa có hệ thống phân quyền nâng cao.  
-- Chưa hỗ trợ upload hình ảnh bìa sách.  
+- Chưa hỗ trợ đọc thử. 
   
 ---
 
