@@ -184,6 +184,6 @@ npm run dev
 
 ---
 
-📌 **Tác giả:** Cao Hoàng Khai  
+📌 **Tác giả:** Cao Hoàng Khải  
 📍 **Công nghệ:** Node.js | Vue.js | MongoDB | Bootstrap  
 📧 **Liên hệ:** hoangcao230703@gmail.com
